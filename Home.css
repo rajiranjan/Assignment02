@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: #fad2f4;
+  background-color: #f5e4d6;
 }
 
 #pict{
@@ -15,7 +15,7 @@ body{
 }
 
 .row{
-  background-color: lightcoral;
+  background-color: fad2f4;
 }
 
 .webamigo{
@@ -61,7 +61,7 @@ body{
     }
     .gallery .gallery-filter .filter-item{
     color: black;
-    border: 2px solid #c8ddc9;
+    border: 2px solid #fad2f4;
     display: inline-block;
     border-radius: 20px;
     margin-right: 8px;
@@ -70,8 +70,8 @@ body{
     }
     .gallery .gallery-filter .filter-item.active{
     color: black;
-    border-color : #c8ddc9;
-    background: #c8ddc9;
+    border-color : #fad2f4;
+    background: #fad2f4;
     }
     .gallery .gallery-item{
     width: calc(100% / 3);
@@ -79,7 +79,7 @@ body{
     }
     .gallery .gallery-item-inner img{
     width: 100%;
-    border: 3px solid #c8ddc9;
+    border: 3px solid #fad2f4;
     }
     
 
@@ -88,7 +88,7 @@ body{
     justify-content: center;
     grid-template-columns: 320px 320px 320px 320px; /*Make the grid smaller than the container*/
     gap: 10px;
-    background-color: lightcoral;
+    background-color: #fad2f4;
     padding: 10px;
   }
   
@@ -103,7 +103,7 @@ body{
     justify-content: center;
     grid-template-columns: 210px 210px 210px 210px 210px 210px; /*Make the grid smaller than the container*/
     gap: 10px;
-    background-color: lightcoral;
+    background-color: #fad2f4;
     padding: 10px;
   }
   
@@ -121,13 +121,13 @@ body{
     justify-content: center;
     grid: 350px / 1800px;
     grid-gap: 10px;
-    background-color: lightcoral;
+    background-color: #fad2f4;
     padding: 10px;
     font-size: 10px;
   }
   
   .grid-containerrs > div {
-    background-color: lightcoral;
+    background-color: #fad2f4;
     text-align: center;
     padding: 20px 0;
     font-size: 10px;
@@ -233,9 +233,9 @@ body{
     height: 30px;
     border: none;
     font-size: 1rem;
-    background-color: #00b894;
+    background-color: #923865;
     color: #fff;
-    border: 2px solid #00b894;
+    border: 2px solid #923865;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 3px;
@@ -335,3 +335,147 @@ body{
     
     
       /* end loader */
+
+      /* start navigation bar */
+
+      *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    body{
+        font-family: sans-serif;
+    
+    }
+    
+    nav{
+        height: 80px;
+        width: 100%;
+        background: #34495e;
+    
+    }
+    
+    label.logo{
+        font-size: 35px;
+        font-weight: bold;
+        color: white;
+        padding: 0 100px;
+        line-height: 80px;
+    }
+    nav ul{
+        float:right;
+        margin-right: 40px;
+    
+    }
+    nav li{
+        display: inline-block;
+        margin: 0 8px;
+        line-height: 80px;
+    }
+    nav a{
+        color: white;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        padding: 7px 10px;
+        border-radius: 3px;
+    }
+    
+    a.active, a:hover{
+        border: 1px solid white;
+        transition: .5s;
+    }
+    nav #icon{
+        color: white;
+        font-size: 30px;
+        line-height: 80px;
+        float: right;
+        margin-right: 40px;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    
+    @media (max-width: 1048px){
+        label.logo{
+            font-size: 32px;
+            padding-left: 60px;
+        }
+        nav a{
+            font-size: 17px;
+        }
+    }
+    @media (max-width: 909px){
+        nav #icon{
+            display: block;
+        }
+        nav ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2f3640;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all,.5s;
+        }
+        nav li{
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        }
+        nav a{
+            font-size: 20px;
+        }
+        a.active,a.hover{
+            border: none;
+            color: #9de8f8;
+    
+        }
+        nav ul.show{
+            left: 0;
+        }
+    }
+    
+    .dropbtn {
+        background-color: #34495e;
+        color: white;
+        padding: 0px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #34495e;
+        min-width: 60px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
+
+      /* end navigation bar */
+      
