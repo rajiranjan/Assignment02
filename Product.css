@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+  background-color: #c8ddc9;
+}
+
+
+.webamigo{
+    float: left;
+    margin-left: 100px;
+}
+.listitem{
+    float: right;
+    margin-right: 100px;
+}
+.start{
+    border-radius: 15px;
+    color: orangered;
+    text-decoration-color: black;
+    background-color:teal;
+}
+.navibar{
+    float: right;
+    margin-right: 100px;
+    
+}
+.buttons{
+    text-align: center;
+    margin-left: 200px;
+  }
+  .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 320px 320px 320px 320px; /*Make the grid smaller than the container*/
+    gap: 10px;
+    background-color: #c8ddc9;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: #c8ddc9;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .fsec1{
+    float: left;
+    margin-left: 100px;
+    
+    
+    
+  }
+  .fsec2{
+    float: right;
+    margin-right: 100px;
+    
+    
+    
+  }
+  .col bg-dark{
+    padding: 5px;
+  }
+  
+  #colours{
+    background-color: #c8ddc9;
+  }

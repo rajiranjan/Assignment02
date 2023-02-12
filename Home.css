@@ -1,0 +1,337 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: #fad2f4;
+}
+
+#pict{
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.row{
+  background-color: lightcoral;
+}
+
+.webamigo{
+    float: left;
+    margin-left: 100px;
+}
+.listitem{
+    float: right;
+    margin-right: 100px;
+}
+.start{
+    border-radius: 15px;
+    color: white;
+    text-decoration-color: black;
+    background-color:#a60422;
+}
+.para1{
+    float: left;
+    margin-left: 200px;
+
+}
+.image1{
+    float: right;
+    margin-right: 200px;
+}
+.hrtag{
+    margin-left: 870px;
+    margin-right: 500px;
+    width: 100px;
+    height: 200px;
+    color: teal;
+}
+.smallnav{
+    text-align: center;
+    float: right;
+    margin-right: 810px;
+}
+.gallery .gallery-filter{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    }
+    .gallery .gallery-filter .filter-item{
+    color: black;
+    border: 2px solid #c8ddc9;
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+    padding: 8px 20px 8px 20px;
+    }
+    .gallery .gallery-filter .filter-item.active{
+    color: black;
+    border-color : #c8ddc9;
+    background: #c8ddc9;
+    }
+    .gallery .gallery-item{
+    width: calc(100% / 3);
+    padding: 15px;
+    }
+    .gallery .gallery-item-inner img{
+    width: 100%;
+    border: 3px solid #c8ddc9;
+    }
+    
+
+  .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 320px 320px 320px 320px; /*Make the grid smaller than the container*/
+    gap: 10px;
+    background-color: lightcoral;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .grid-containers {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 210px 210px 210px 210px 210px 210px; /*Make the grid smaller than the container*/
+    gap: 10px;
+    background-color: lightcoral;
+    padding: 10px;
+  }
+  
+  .grid-containers > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .buttons{
+    text-align: center;
+  }
+  .grid-containerrs {
+    display: grid;
+    justify-content: center;
+    grid: 350px / 1800px;
+    grid-gap: 10px;
+    background-color: lightcoral;
+    padding: 10px;
+    font-size: 10px;
+  }
+  
+  .grid-containerrs > div {
+    background-color: lightcoral;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 10px;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px 2px;
+    border-radius: 50%;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fsec1{
+    float: left;
+    margin-left: 100px;
+   
+    
+    margin-right: 500px;
+  }
+  .fsec2{
+    float: right;
+    margin-right: 100px;
+    
+    margin-left: 500px;
+    
+  }
+  .gets{
+    color: black;
+    border: 15px;
+    border-radius: 15px;
+    background-color: #a60422;
+    font-size:x-large;
+  }
+  
+  .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  .store-item{
+    width: 300px;
+    padding: 1rem;
+  }
+   
+  .store-item img{
+    width: 100%;
+    display: block;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+  }
+
+ 
+
+body{
+    background-color: #fad2f4;
+    padding: 1rem;
+
+    /* start image filter */
+}
+.box{
+    height: 8rem;
+    border: 5px solid white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    transform-origin: top;
+}
+
+.box img:hover{
+    transform: scale(1.5);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
+}
+.control{
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-group button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    font-size: 1rem;
+    background-color: #00b894;
+    color: #fff;
+    border: 2px solid #00b894;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.btn-group button:hover,
+.btn-group .btn-clicked
+{
+    background-color: #353b48;
+}
+#search{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: 2px solid #00b894;
+    border-radius: 3px;
+    padding: 0px 10px;
+    font-size: 0.8rem;
+}
+    
+/* end image filter */
+/* start carousel */
+.carousel{
+  width: 400px;
+  height: 221px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(images/cake04.jpeg);
+}
+
+.fade{
+  -webkit-animation: 1.5s fade;
+  animation: 1.5s fade;
+}
+
+@-webkit-keyframes fade{
+  from{opacity: 0.4;}
+  to{opacity: 1}
+  
+}
+@keyframes fade{
+  from{opacity: 0.4}
+  to{opacity: 1}
+}
+    /* end carousel */
+    
+    /* add loader */
+    
+    #loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 120px;
+      height: 120px;
+      margin: -76px 0 0 -76px;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Add animation to "page content" */
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+    
+    @-webkit-keyframes animatebottom {
+      from { bottom:-100px; opacity:0 } 
+      to { bottom:0px; opacity:1 }
+    }
+    
+    @keyframes animatebottom { 
+      from{ bottom:-100px; opacity:0 } 
+      to{ bottom:0; opacity:1 }
+    }
+    
+    #myDiv {
+      display: none;
+      text-align: center;
+    }
+    
+    
+      /* end loader */
