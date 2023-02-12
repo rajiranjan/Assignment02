@@ -11,13 +11,43 @@
             width: 600px;
         }
 
+        body{
+            background-color: #f5f3ec;
+        }
+        .flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f3ec;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 600px;
+    margin: 10px;
+    text-align: center;
+    line-height: 195px;
+    font-size: 1.1rem;
+  }
+
     </style>
 </head>
 <body>
-    
-    <div id="map">
-
+    <div style="text-align: center;"><p style="color: #923865; font-size: 1.7rem;"><b>Drop Us a Mail</b></p>
+    <div class="flex-container"><br><br>
+        <div id="map"></div>
+        <div><p>45 BC, a Latin professor at Hampden-Sydney College in Virginia</p>
+        <div>
+            <label>Phone: </label>
+            
+        </div> 
+        </div>
+         
     </div>
+    </div>
+
+
+
+   
 
     <script src="Map.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBTsw3a0xr_gDG89PMwd99dpxoE-y45A&callback=initMap"></script>
