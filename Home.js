@@ -80,6 +80,16 @@ function openPopup(){
 }
 
 
+// add js to nav bar
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "logo") {
+      x.className += " responsive";
+    } else {
+      x.className = "logo";
+    }
+  }
+
 
 
 
@@ -110,3 +120,9 @@ function openPopup(){
 // function focusPopup(){
 
 // }
+
+function openNew(){
+    newwin = window.open('Map.html');
+}
+
+
