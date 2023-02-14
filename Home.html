@@ -10,14 +10,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <script src="https://kit.fontawesome.com/aaf7fffdc6.js" crossorigin="anonymous"></script>
+    
 </head>
 <body onload="myFunction()">
 <!--navigation bar start here-->
 <section>
-<nav>
-  <label class="logo">DesignX</label>
-  <ul>
+
+<!-- add new nav bar -->
+<nav class="navbar">
+  <div class="logo_header">
+    <a href="#" class="logo">Logo</a>
+    <!-- <button class="navbar_toggle">
+      <i class="fas fa-bars" width="15px"></i>
+    </button> -->
+  </div>
+
+  
+  <ul class="main_nav">
+    <li>
+      <a href="#" class="nav_links">Home</a>
+    </li>
+    <li>
+      <a href="#" class="nav_links">About</a>
+    </li>
+    <li>
+      <a href="#" class="nav_links" onclick="openPopup()">Services</a>
+    </li>
+    <li>
+      <a href="#" class="nav_links">Portfolio</a>
+    </li>
+    <li>
+      <a href="#" class="nav_links">Team</a>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+        <a href="#">Action</a>
+        <a href="#">Another Action</a>
+        <a href="#">Something else here</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#" class="nav_links" onclick="openNew()">Contact</a>
+    </li>
+    <li>
+      <a href="#" class="nav_links">Get Started</a>
+    </li>
+  </ul>
+    
+</nav>
+</section>
+
+
+
+
+
+
+
+<!-- end nav bar -->
+
+
+<!-- <nav>
+  <label class="logo" id="myTopnav">DesignX</label>
+  <ul class="icon" onmouseover="myFunction()">
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#" onclick="openPopup()">Service</a></li>
@@ -34,12 +91,12 @@
       </li>
       <li><a href="#">contact</a></li>
       <li><a href="#">Get Started</a></li>
-  </ul>
-  <label id="icon">
+  </ul> -->
+  <!-- <label id="icon">
       <i class="fas fa-bars"></i>
-  </label>
-</nav>
-</section>
+  </label> -->
+<!-- </nav>
+</section> -->
 
 
 
@@ -299,7 +356,7 @@
             <hr class = "hrtag" style="height: 5px; color:black; border-radius: 15px;">
             <!-- head at the section end here -->
             <section class="gallery">
-              <div class="grid-container" style="background-color: #fad2f4;">
+              <div class="grid-container" style="background-color: #edd2a7;">
                 <div><img src="./images/chef1.png" width="300px" height="300px"></div>
                 <div><img src="./images/chef2.jpg" width="300px" height="300px"></div>
                 <div><img src="./images/chef3.jpg" width="300px" height="300px"></div>  
@@ -310,7 +367,7 @@
           </section><br>
 
           <section>
-            <div class="grid-containerrs" style="text-align: center; background-color: #f5f3ec;">
+            <div class="grid-containerrs" style="text-align: center; background-color: #edd2a7;">
               <div class="item1" style="background-color: #f5f3ec;"><h4 style="color:cornflowerblue; text-align:center;">Clients</h4>
                 <h2 style="text-align: center;">They trusted us</h2>
                 <hr class = "hrtag" style="height: 5px; color:black; border-radius: 15px;">
@@ -332,7 +389,7 @@
             <section>
 
               
-              <div class="grid-container" style="background-color: #fad2f4;">
+              <div class="grid-container" style="background-color: #edd2a7;">
                 <div class="col bg-dark" style="font-size: 20px; color:white;"><b style="font-size:30px;">Web Amigo</b><br>A108 Adom Street<br>New York, NY 535022<br>United States<br><br><b>Phone:</b>+1 55895548855<br><b>Email:</b>info@example.com</br></div>
                 <div class="col bg-dark" style="font-size: 20px; color:white; text-align: center;"><b style="font-size:30px;">Useful Links</b><br><ul style="text-align: left;"><li>Home</li><li>About Us</li><li>Services</li><li>Terms of service</li><li>Privacy policy</li></ul></div>
                 <div class="col bg-dark" style="font-size: 20px; color:white; text-align: center;"><b style="font-size:30px;">Our Services</b><br><ul style="text-align: left;"><li>Web Design</li><li>Web Development</li><li>Product Management</li><li>Marketing</li><li>Graphic Design</li></ul></div>  
@@ -378,7 +435,7 @@
    
 
 
-    
+    <script src="https://kit.fontawesome.com/aaf7fffdc6.js" crossorigin="anonymous"></script>
     <script src="Home.js"></script>
     <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
