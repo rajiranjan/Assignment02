@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Details</title>
     <style>
+        
         #map{
-            height: 600px;
-            width: 600px;
+            height: 800px;
+            width: 700px;
         }
 
         body{
@@ -17,17 +18,155 @@
         .flex-container {
     display: flex;
     justify-content: center;
-    background-color: #f5f3ec;
+    background-color: #5c5c5c;
   }
   
   .flex-container > div {
-    background-color: #f1f1f1;
-    width: 600px;
+    background-color:#AECFFF;
+    width: 700px;
     margin: 10px;
     text-align: center;
-    line-height: 195px;
+    line-height: 9px;
     font-size: 1.1rem;
   }
+ .card-text{
+    
+    justify-items: left;
+    margin-left: 50px;
+ }
+ .card-body{
+    justify-items: left;
+    text-align: left;
+ }
+
+ :root{
+    --grey: #F4f2FF;
+    --dark-grey:#B7B7B7;
+
+    --green:#23AEOO;
+    --light-green:#FFD2D2;
+
+    --red:#FE2727; 
+    --light-red: #FFD2D2;
+     
+    --blue: #277FFE;
+    --light-blue: #c6d1dc;
+    --dark-blue: #1368E3;
+
+    --bs: #AECFFF;
+    --text:#9B9B9B; 
+}
+
+body{
+    background: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 16px;
+}
+
+.container{
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    margin-top: 200px;
+}
+form{
+    width: 150%;
+    padding: 20px;
+    border-radius: 2px;
+    background: #f4f4f4;
+    position: absolute;
+    transform: translateY(-50%) scale(.8);
+    opacity: 0;
+    z-index: 100;
+    transition: all .3s ease;
+    transition-delay: 0s;
+    margin-left: 55px;
+   
+    
+}
+
+form.active{
+    transform: translateY(-50%);
+    opacity: 1;
+    z-index: 200;
+    transition-delay: .3s;
+
+}
+
+
+
+.title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.form-group{
+    margin-bottom: -10px;
+    
+}
+.form-group label{
+    display: block;
+    margin-bottom: 4px;
+    float: left;
+
+}
+.input-group{
+    width: 90%;
+    position: relative;
+}
+.input-group input{
+    padding: -110px 40px 12px 20px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid var(--dark-grey);
+    width: 100%;
+    transition: all .3s ease;
+    line-height: 2;
+}
+.input-group i{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: var(--text);
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.input-group input:focus,
+.input-group input:not(:placeholder-shown){
+    border-color: var(--text);
+    background: var(--grey);
+}
+
+.input-group input:focus + i,
+.input-group input:not(:placeholder-shown) + i {
+    color: var(--blue);
+}
+.input-group input:focus{
+    box-shadow: 0 0 0 4px var(--bs);
+}
+
+.btn-submit{
+    padding: 12px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: none;
+    font-weight: 500px;
+    background: var(--blue);
+    
+}
+.btn-submit:hover{
+    background: var(--dark-blue);
+}
+
 
     </style>
 </head>
@@ -35,17 +174,145 @@
     <div style="text-align: center;"><p style="color: #923865; font-size: 1.7rem;"><b>Drop Us a Mail</b></p>
     <div class="flex-container"><br><br>
         <div id="map"></div>
-        <div><p>45 BC, a Latin professor at Hampden-Sydney College in Virginia</p>
         <div>
-            <label>Phone: </label>
+            <div class="card" style="width: 35rem;">
+                <div class="card-body">
+                  <h4 class="card-title" style=" margin-left: 50px;">45 BC, a Latin professor at Hampden-Sydney College in Virginia</h4>
+                  <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                  <!-- card start here -->
+                  <p class="card-text">Phone:   +91 976885083 </p> 
+                  <p class="card-text">Email:   stephanana67@gmail.com </p>
+                  <p class="card-text">Fax:   +91 9768850839 </p><br><br>
+                  <h3 style="color: #621406;  margin-left: 50px;">Want to know More?? Drop US a Mail</h3>
+                </div>
+                <!-- card end here -->
+                <!-- form start here -->
+              </div>
+            <div class="p-2 bd-highlight"><div class="container">
+                <form action="#" onsubmit="return myfun()" class="login active" id="form" style="margin-top: 180px;">
+                    <h2 class="title">Login</h2>
             
-        </div> 
-        </div>
+                    <div class="form-group">
+                    <label for="Name">Name</label>
+                     <div class="input-group">
+                         <input type="fname" id="name" placeholder="Name">
+                         <i class='bx bxs-user' ></i>
+                         <p id="nameerror"></p>
+                         <!-- <p>Name must be between 2 and 23 characters</p> -->
+                         </div>
+                     </div>
+            
+                     <div class="form-group">
+                        <label for="Email">Email</label>
+                         <div class="input-group">
+                             <input type="email" id="email" placeholder="Email address">
+                             <i class='bx bx-envelope'></i>
+                             <p id="emailerror"></p>
+                             <!-- <p>Email is invalid</p> -->
+                             </div>
+                         </div>
+            
+                         <div class="form-group">
+                            <label for="Zipcode">Zipcode</label>
+                             <div class="input-group">
+                                 <input type="Zipcode" id="Zipcode" placeholder="Zipcode">
+                                 <i class='bx bx-package' ></i>
+                                 <p id="zcodeerror"></p>
+                                 <!-- <p>Zipcode is invalid</p> -->
+                                 </div>
+                             </div>
+            
+                             <div class="form-group">
+                                <label for="Phone number">Phone Number</label>
+                                 <div class="input-group">
+                                     <input type="Phone number" id="Phone number" placeholder="Phone number">
+                                     <i class='bx bxs-phone' ></i>
+                                     <p id="pnumbererror"></p>
+                                     <!-- <p>Phone number is invalid</p> -->
+                                     </div>
+            
+                                 </div>
+                                 <input type="submit" class="btn-submit" onclick="alert('Success\nYou are Welcome?')" value="Submit">
+                                 <!-- form end here -->
+                                 
+                </form>
+           
+                
          
+
+
+
+
+
+        
     </div>
     </div>
 
+    <script>
+        function myfun(){
 
+var fname = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var zipcode = document.getElementById("Zipcode").value;
+var phonenumber = document.getElementById("Phone number").value;
+
+// regular expressions
+var fnamereg = /^[a-zA-Z]{2,23}$/;
+var emailreg = /[a-z0-9A-Z]@[a-z0-9A-Z]{1,10}\.[a-z]{2,}$/gim;
+var zipcodereg = /^[10000-90000]/;
+var phonenumberreg = /^\d{10}$/;
+
+//start fuction
+
+    if(fnamereg.test(fname)){
+        document.getElementById("nameerror").innerHTML=""
+    }
+    else {
+        document.getElementById("nameerror").innerHTML="Name must be between 2 and 23 characters";
+    }
+    //end
+
+    //start
+    if(emailreg.test(email)){
+        document.getElementById("emailerror").innerHTML=""
+    }
+    else {
+        document.getElementById("emailerror").innerHTML="Email is invalid";
+    }
+    //end
+
+    //start
+    if(zipcodereg.test(zipcode)){
+        document.getElementById("zcodeerror").innerHTML=""
+    }
+    else{
+        document.getElementById("zcodeerror").innerHTML="Zipcode is invalid";
+    }
+    //end
+
+    //start
+    if(phonenumberreg.test(phonenumber)){
+        document.getElementById("pnumbererror").innerHTML="";
+    }
+    else{
+        document.getElementById("pnumbererror").innerHTML="Phone number is invalid";
+    }
+    //end
+    return false;
+    }
+    
+    function initMap(){
+    var center = {lat:37.7749,lng:-122.4194}
+    var options = {
+        zoom: 5,
+        center: center
+    };
+    var map = new google.maps.Map(document.getElementById("map"),options)
+}
+
+
+
+    </script>
 
    
 
