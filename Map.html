@@ -232,7 +232,10 @@ form.active{
                                      </div>
             
                                  </div>
-                                 <input type="submit" class="btn-submit" onclick="alert('Success\nYou are Welcome?')" value="Submit">
+                                 <input type="submit" class="btn-submit" onclick="openSub()" value="Submit"><br>
+                                 <input type="button" value="Refresh" width="105px" height="25px" style="float: left;" onclick="refresh()">
+                                 <input type="button" value="Back Home" width="105px" height="25px" style="float: right;" onclick="openHome()">
+
                                  <!-- form end here -->
                                  
                 </form>
@@ -257,7 +260,7 @@ var zipcode = document.getElementById("Zipcode").value;
 var phonenumber = document.getElementById("Phone number").value;
 
 // regular expressions
-var fnamereg = /^[a-zA-Z]{2,23}$/;
+var fnamereg = /^[a-zA-Z]{2,23}/;
 var emailreg = /[a-z0-9A-Z]@[a-z0-9A-Z]{1,10}\.[a-z]{2,}$/gim;
 var zipcodereg = /^[10000-90000]/;
 var phonenumberreg = /^\d{10}$/;
@@ -266,8 +269,7 @@ var phonenumberreg = /^\d{10}$/;
 
     if(fnamereg.test(fname)){
         document.getElementById("nameerror").innerHTML=""
-    }
-    else {
+    }else {
         document.getElementById("nameerror").innerHTML="Name must be between 2 and 23 characters";
     }
     //end
@@ -310,12 +312,39 @@ var phonenumberreg = /^\d{10}$/;
     var map = new google.maps.Map(document.getElementById("map"),options)
 }
 
+function openHome(){
+    newwin = window.open('Map.html');
+}
+
+function openMain(){
+    newwin = window.open('Map.html');
+}
+
+function openSub(){
+    function logSubmit(event) {
+  log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
+  event.preventDefault();
+}
+
+const form = document.getElementById('form');
+const log = document.getElementById('log');
+form.addEventListener('submit', logSubmit);
+}
+
+function openHome(){
+    newwin = window.open('Home.html');
+}
+
+
+  function refresh(){
+        window.location.reload("Refresh")
+      }
 
 
     </script>
 
    
-
+    <script src="./Map.js"></script>
     <script src="Map.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBTsw3a0xr_gDG89PMwd99dpxoE-y45A&callback=initMap"></script>
 </body>

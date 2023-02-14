@@ -125,4 +125,16 @@ function openNew(){
     newwin = window.open('Map.html');
 }
 
+// nav bar cursor
+document.getElementsByClassName("nav_links").addEventListener("mouseover", mouseOver);
+document.getElementsByClassName("nav_links").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.getElementsByClassName("nav_links").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementsByClassName("nav_links").style.color = "white";
+}
+
 
